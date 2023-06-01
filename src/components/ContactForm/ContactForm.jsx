@@ -44,12 +44,12 @@ export const ContactForm = () => {
         <Form>
           <FormLabel>
             Name
-            <Field name="name" placeholder="Jane Smith" autoComplete="off" />
+            <Field name="name" placeholder="Jane Smith" />
             <ErrorMessage name="name" component="span" />
           </FormLabel>
           <FormLabel>
             Number
-            <Field name="number" placeholder="111-11-11" autoComplete="off" />
+            <Field name="number" placeholder="111-11-11" />
             <ErrorMessage name="number" component="span" />
           </FormLabel>
           <Button type="submit">Add contact</Button>

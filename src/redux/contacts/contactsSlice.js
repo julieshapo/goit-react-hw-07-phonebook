@@ -1,4 +1,4 @@
-import { createSlice, isAnyOf, nanoid } from '@reduxjs/toolkit';
+import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import toast from 'react-hot-toast';
 import {
   createContactThunk,

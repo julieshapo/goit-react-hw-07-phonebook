@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contacts/contactsSlice';
+import { createContactThunk } from '../../redux/contacts/operations';
 
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -37,19 +37,19 @@ export const ContactForm = () => {
         initialValues={{ name: '', number: '' }}
         validationSchema={ContactScheme}
         onSubmit={(values, actions) => {
-          dispatch(addContact(values, values.name));
+          dispatch(createContactThunk(values, values.name));
           actions.resetForm();
         }}
       >
         <Form>
           <FormLabel>
             Name
-            <Field name="name" placeholder="Jane Smith" />
+            <Field name="name" placeholder="Jane Smith" autoComplete="off" />
             <ErrorMessage name="name" component="span" />
           </FormLabel>
           <FormLabel>
             Number
-            <Field name="number" placeholder="111-11-11" />
+            <Field name="number" placeholder="111-11-11" autoComplete="off" />
             <ErrorMessage name="number" component="span" />
           </FormLabel>
           <Button type="submit">Add contact</Button>

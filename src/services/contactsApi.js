@@ -5,11 +5,15 @@ export const getContacts = async () => {
   return data.json();
 };
 
-// console.log(getContacts());
+export const addContact = async data => {
+  const res = await fetch(`${BASE_URL}/contacts`, {
+    body: JSON.stringify(data),
+  });
 
-// const getContacts = async () => {
-//   await fetch('https://6474ab4e7de100807b1b81b3.mockapi.io/contacts/contacts')
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-//     .catch(error => console.log(error));
-// };
+  return res.json();
+};
+
+export const deleteContact = async id => {
+  const res = await fetch(`${BASE_URL}/contacts/${id}`);
+  return await res.json();
+};

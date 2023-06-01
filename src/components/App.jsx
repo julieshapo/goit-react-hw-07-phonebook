@@ -1,16 +1,16 @@
+import { Layout } from 'components/Layout/Layout';
+import { ContactForm } from 'components/ContactForm/ContactForm';
+import { ContactsList } from 'components/ContactList/ContactList';
+import { Filter } from 'components/Filter/Filter';
+import { Toaster } from 'react-hot-toast';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Layout>
+      <ContactForm />
+      <Filter />
+      <ContactsList />
+      <Toaster />
+    </Layout>
   );
 };

@@ -1,6 +1,6 @@
 import { deleteContactThunk } from '../../redux/contacts/operations';
 import { useDispatch } from 'react-redux';
-import { Button, ContactItem } from './Contact.styled';
+import { Button, ContactItem, Name } from './Contact.styled';
 import PropTypes from 'prop-types';
 
 export const Contact = ({ contact: { name, number, id } }) => {
@@ -8,9 +8,9 @@ export const Contact = ({ contact: { name, number, id } }) => {
 
   return (
     <ContactItem>
-      <p>
+      <Name>
         {name} : {number}
-      </p>
+      </Name>
       <Button onClick={() => dispatch(deleteContactThunk(id))}>Delete</Button>
     </ContactItem>
   );

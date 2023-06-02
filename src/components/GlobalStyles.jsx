@@ -26,9 +26,20 @@ p {
   margin: 0;
 }
 
+ul {
+  margin-left: 0;
+  padding: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
+button {
+  cursor: pointer;
+
+}
+
 `;

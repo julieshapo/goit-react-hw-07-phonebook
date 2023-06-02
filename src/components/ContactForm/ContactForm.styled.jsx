@@ -10,7 +10,7 @@ export const Title = styled.h1`
 `;
 
 export const Form = styled(FormikForm)`
-  width: 400px;
+  max-width: 400px;
   padding: 8px;
   border: 1px solid #2a2a2a;
   display: flex;
@@ -33,12 +33,17 @@ export const ErrorMessage = styled(FormikErrorMessage)`
 `;
 
 export const Button = styled.button`
-  font-size: 16px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid ${p => p.theme.colors.gray};
+  text-transform: uppercase;
+  font-weight: 700;
+  color: ${p => p.theme.colors.orange};
+
   :hover {
     background-color: ${p => p.theme.colors.orange};
     color: ${p => p.theme.colors.white};
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
-    border: 1px solid ${p => p.theme.colors.black};
-    border-radius: 4px;
+    border: 1px solid ${p => p.theme.colors.gray};
   }
 `;

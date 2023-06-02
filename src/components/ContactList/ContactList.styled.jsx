@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 600px;
+  max-width: 600px;
   margin-right: auto;
+  padding: 15px;
+`;
+
+export const ErrorMsg = styled.div`
+  color: ${p => p.theme.colors.error};
+  font-size: 16px;
+  margin-top: 30px;
 `;

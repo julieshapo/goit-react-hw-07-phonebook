@@ -1,5 +1,4 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import toast from 'react-hot-toast';
 import {
   createContactThunk,
   deleteContactThunk,
@@ -18,11 +17,6 @@ const handleFulfilledGet = (state, action) => {
 };
 
 const handleFulfilledCreate = (state, action) => {
-  if (state.contacts.find(contact => contact.name === action.payload.name)) {
-    toast.error(`${action.payload.name} is already in contacts.`);
-    return;
-  }
-
   state.status = 'fulfilled';
   state.contacts.push(action.payload);
   state.error = '';
